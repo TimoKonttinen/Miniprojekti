@@ -15,7 +15,7 @@ public class VinkkiController {
     @GetMapping("/")
     @ResponseBody
     public String home() {
-        return "<a href='/other'>linkki</a>";
+        return "index";
     }
 
     @GetMapping("/other")
