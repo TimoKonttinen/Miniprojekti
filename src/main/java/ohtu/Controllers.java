@@ -14,9 +14,11 @@ public class Controllers {
 
     @GetMapping("/")
     @ResponseBody
-    public String home() {
-            String dbUrl = System.getenv("JDBC_DATABASE_URL");
-        return dbUrl;
+    public String home() throws Exception {
+//            String dbUrl = System.getenv("JDBC_DATABASE_URL");
+//            DriverManager.getConnection(dbUrl).prepareStatement("CREATE TABLE testi(    )");
+        return "<a href='/other'>linkki</a>";
+
     }
     
     @GetMapping("/other")
