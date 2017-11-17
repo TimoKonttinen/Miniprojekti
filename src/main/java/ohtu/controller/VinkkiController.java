@@ -13,7 +13,6 @@ public class VinkkiController {
     private VinkkiRepository vinkkiRepository;
 
     @GetMapping("/")
-    @ResponseBody
     public String home() {
         return "index";
     }
