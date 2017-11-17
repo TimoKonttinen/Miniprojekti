@@ -1,0 +1,22 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        
+       
+    </head>
+    <body>
+           <form th:action="@{/kirjoittajat}" method="POST">
+            <span>Lisää kirjoittaja:</span><br/>
+            <input type="text" name="kirjoittaja"/><br/>
+            <input type="submit" value="Lisää"/>
+        </form>
+    
+    <table>
+        <tr th:each="vinkki : ${vinkit}">
+                <td th:text="${vinkki.kirjoittaja}"></td>
+            </tr>
+    </table>
+        
+    </body>
+</html>
