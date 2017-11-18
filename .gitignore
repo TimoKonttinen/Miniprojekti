@@ -1,4 +1,10 @@
-/.nb-gradle/
-/build/
-.gradle*
-.gradle/*
+
+build/
+bin/
+.gradle/
+.settings/
+
+gradle.properties
+.classpath
+.project
+
