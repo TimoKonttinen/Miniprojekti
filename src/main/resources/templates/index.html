@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title>title</title>
+    </head>
+<body>
+        <h1> Tervetuloa vinkkilista -alphaan!</h1>
+        <form th:action="@{/}" method="POST">
+            <span>Käyttäjänimi:</span><br/>
+            <input type="text" name="kayttajanimi"/><br/>
+            <span>Salasana:</span><br/>
+            <input type="password" name="salasana"/><br/>
+
+            <input type="submit" value="Kirjaudu"/>
+        </form>
+   
+
+</body>
+</html>
