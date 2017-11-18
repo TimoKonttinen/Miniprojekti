@@ -1,14 +1,18 @@
 package ohtu.domain;
 
-import java.net.URI;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.transaction.Transactional;
+import java.net.URI;
 
 @Entity
 public class Vinkki extends AbstractPersistable<Long>  {
 
-    private String kirjoittaja;
+    @ManyToOne
+    private Kirjoittaja kirjoittaja;
+
     private String otsikko;
     private String ISBN;
     private String tyyppi;
@@ -18,128 +22,92 @@ public class Vinkki extends AbstractPersistable<Long>  {
     private String kommentti;
     private URI url;
 
- /**
-     * @return the kirjoittaja
-     */
-    public String getKirjoittaja() {
-        return kirjoittaja;
+    @Transactional
+    public Kirjoittaja getKirjoittaja() {
+        return this.kirjoittaja;
     }
 
-    /**
-     * @param kirjoittaja the kirjoittaja to set
-     */
-    public void setKirjoittaja(String kirjoittaja) {
+    @Transactional
+    public void setKirjoittaja(Kirjoittaja kirjoittaja) {
         this.kirjoittaja = kirjoittaja;
     }
 
-    /**
-     * @return the otsikko
-     */
+    @Transactional
     public String getOtsikko() {
         return otsikko;
     }
 
-    /**
-     * @param otsikko the otsikko to set
-     */
+    @Transactional
     public void setOtsikko(String otsikko) {
         this.otsikko = otsikko;
     }
 
-    /**
-     * @return the ISBN
-     */
+    @Transactional
     public String getISBN() {
         return ISBN;
     }
 
-    /**
-     * @param ISBN the ISBN to set
-     */
+    @Transactional
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
-    /**
-     * @return the tyyppi
-     */
+    @Transactional
     public String getTyyppi() {
         return tyyppi;
     }
 
-    /**
-     * @param tyyppi the tyyppi to set
-     */
+    @Transactional
     public void setTyyppi(String tyyppi) {
         this.tyyppi = tyyppi;
     }
 
-    /**
-     * @return the tagit
-     */
+    @Transactional
     public String getTagit() {
         return tagit;
     }
 
-    /**
-     * @param tagit the tagit to set
-     */
+    @Transactional
     public void setTagit(String tagit) {
         this.tagit = tagit;
     }
 
-    /**
-     * @return the esitietoKurssit
-     */
+    @Transactional
     public String getEsitietoKurssit() {
         return esitietoKurssit;
     }
 
-    /**
-     * @param esitietoKurssit the esitietoKurssit to set
-     */
+    @Transactional
     public void setEsitietoKurssit(String esitietoKurssit) {
         this.esitietoKurssit = esitietoKurssit;
     }
 
-    /**
-     * @return the relatedCourses
-     */
+    @Transactional
     public String getRelatedCourses() {
         return relatedCourses;
     }
 
-    /**
-     * @param relatedCourses the relatedCourses to set
-     */
+    @Transactional
     public void setRelatedCourses(String relatedCourses) {
         this.relatedCourses = relatedCourses;
     }
 
-    /**
-     * @return the kommentti
-     */
+    @Transactional
     public String getKommentti() {
         return kommentti;
     }
 
-    /**
-     * @param kommentti the kommentti to set
-     */
+    @Transactional
     public void setKommentti(String kommentti) {
         this.kommentti = kommentti;
     }
 
-    /**
-     * @return the url
-     */
+    @Transactional
     public URI getUrl() {
         return url;
     }
 
-    /**
-     * @param url the url to set
-     */
+    @Transactional
     public void setUrl(URI url) {
         this.url = url;
     }

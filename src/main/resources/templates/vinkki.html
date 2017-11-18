@@ -1,0 +1,35 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Vinkkilistaus</title>
+        
+       
+    </head>
+    <body>
+           <form th:action="@{/vinkki}" method="POST">
+            <span>Lisää vinkki:</span><br/>
+            <span>Kirjoittaja: </span><input type="text" name="kirjoittaja"/><br/>
+               <span>Otsikko: </span><input type="text" name="otsikko"/><br/>
+               <span>Tyyppi: </span><input type="text" name="tyyppi"/><br/>
+               <span>Kommentti:</span> <input type="text" name="kommentti"/><br/>
+            <input type="submit" value="Lisää"/>
+        </form>
+    
+    <table>
+        <tr>
+            <td>Kirjoittaja</td>
+            <td>Otsikko</td>
+            <td>Tyyppi</td>
+            <td>Kommentti</td>
+        </tr>
+        <tr th:each="vinkki : ${vinkit}">
+            <td th:text="${vinkki.kirjoittaja.name}"></td>
+            <td th:text="${vinkki.otsikko}"></td>
+            <td th:text="${vinkki.tyyppi}"></td>
+            <td th:text="${vinkki.kommentti}"></td>
+
+        </tr>
+    </table>
+        
+    </body>
+</html>
