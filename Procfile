@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Dspring.profiles.active=production -Dserver.port=$PORT -jar builds/libs/Miniprojekti.jar
+web: java $JAVA_OPTS -Dspring.profiles.active=production -Dserver.port=$PORT -jar build/libs/Miniprojekti.jar
