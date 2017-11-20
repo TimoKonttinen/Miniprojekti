@@ -15,9 +15,9 @@ Dennis Ahlfors - *Dforssi*
 
 Jaana Embrich - *jaemh*
 
-Oliver Kaarnalehto -*Corned*
+Oliver Kaarnalehto - *Corned*
 
-Mikko Laine -*laimikko1
+Mikko Laine - *laimikko1
 
 Timo Konttinen - *tixkontt*
 
