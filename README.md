@@ -5,7 +5,7 @@ _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 
 [Linkki sovellukseen Herokussa](http://miniprojekti.herokuapp.com/)
 
-[Definition of Done](https://github.com/Dforssi/Miniprojekti/blob/master/DoD)
+[Definition of Done](https://github.com/Dforssi/Miniprojekti/blob/master/Dod.md)
 
 
 ### Travis
