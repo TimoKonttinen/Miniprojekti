@@ -1,5 +1,0 @@
-Definition of Done 
-
-Feature on luotu hyväksymäkriteerien mukaisesti.
-Luodulle featurelle on tehty sille vaadittavat testit, objekteille yksikkötestit ja käyttöliittymäkomponenteille järjestelmätestit.
-Feature on integroitu sovelluksen delivery-versioon, se on käytettävissä Herokusta websovelluksen kautta ja integraatiotestit ovat "passing" tilassa.
