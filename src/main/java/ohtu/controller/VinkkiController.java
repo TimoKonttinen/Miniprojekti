@@ -1,9 +1,10 @@
 package ohtu.controller;
 
 import ohtu.domain.Kirjoittaja;
-import ohtu.domain.KirjoittajaRepository;
 import ohtu.domain.Vinkki;
-import ohtu.domain.VinkkiRepository;
+
+import ohtu.repository.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,6 +33,28 @@ public class VinkkiController {
     public String kirjautuminenPOST(@RequestParam String kayttajanimi, @RequestParam String salasana){
         return "redirect:/vinkki";
     }
+
+    // TEMP
+    @GetMapping("/vinkkilistaus")
+    public String vinkkilistaus() {
+        return "vinkkilistaus";
+    }
+    
+    @GetMapping("/haekirja")
+    public String hae() {
+        return "haekirja";
+    }
+    
+    @GetMapping("/lisaakirja")
+    public String lisaakirja() {
+        return "lisaakirja";
+    }
+    
+    @GetMapping("/about")
+    public String about() {
+        return "about";
+    }
+    // TEMP-END
 
     @GetMapping("/vinkki")
     public String naytaVinkit(Model model) {
