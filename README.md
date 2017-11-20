@@ -5,6 +5,9 @@ _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 
 [Linkki sovellukseen Herokussa](http://miniprojekti.herokuapp.com/)
 
+[Definition of Done](https://github.com/Dforssi/Miniprojekti/blob/master/DoD)
+
+
 ### Travis
 
 [![Build Status](https://travis-ci.org/Dforssi/Miniprojekti.svg?branch=master)](https://travis-ci.org/Dforssi/Miniprojekti)
@@ -17,7 +20,7 @@ Jaana Embrich - *jaemh*
 
 Oliver Kaarnalehto - *Corned*
 
-Mikko Laine - *laimikko1
+Mikko Laitinen - *laimikko1
 
 Timo Konttinen - *tixkontt*
 
