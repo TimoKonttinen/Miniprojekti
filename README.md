@@ -8,7 +8,8 @@ _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 ### Travis
 
 [![Build Status](https://travis-ci.org/Dforssi/Miniprojekti.svg?branch=master)](https://travis-ci.org/Dforssi/Miniprojekti)
-[Dforssi/Miniprojekti @ Travis] (https://travis-ci.org/Dforssi/Miniprojekti)
+
+[Linkki travikseen](https://travis-ci.org/Dforssi/Miniprojekti)
 
 
 
