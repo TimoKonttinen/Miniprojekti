@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<div th:replace="fragments/head">...</div>
+	<head><title>Vinkkilistaus</title></head>
+
+	<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+	</style>
+
+	<body>
+		<div th:replace="fragments/navigation">...</div>
+
+		<table>
+			<tr>
+				<th>Kirjoittaja</th>
+				<th>Otsikko</th>
+				<th>ISBN</th>
+				<th>Tagit</th>
+				<th>Luettu</th>
+				<th>Milloin</th>
+				<th>Kommentit</th>
+			</tr>
+			<tr>
+				<td>Mika Waltari</td>
+				<td>Mikael Karvajalka</td>
+				<td>ISBN-654656545</td>
+				<td>Fiktio, Historia</td>
+				<td>kyllä</td>
+				<td>1.6.2015</td>
+				<td>Loistava keskiajalle sijoittuva veijaritarina!</td>
+				<td><button onclick="alert('Muokataan tietuetta!')" type="button">Muokkaa</button> <button onclick="alert('Haetaan etsimääsi tietoa!')" type="button">Poista</button></td>
+			</tr>
+			<tr>
+				<td>Mika Waltari</td>
+				<td>Mikael Hakim</td>
+				<td>ISBN-654656546</td>
+				<td>Fiktio, Historia</td>
+				<td>kyllä</td>
+				<td>1.6.2016</td>
+				<td>Mikael Karvajalka -teoksen jatko-osa.</td>
+				<td><button onclick="alert('Muokataan tietuetta!')" type="button">Muokkaa</button> <button onclick="alert('Haetaan etsimääsi tietoa!')" type="button">Poista</button></td>
+			</tr>
+			<tr>
+				<td>Mika Waltari</td>
+				<td>Turms Kuolematon</td>
+				<td>ISBN-654656547</td>
+				<td>Fiktio, Historia</td>
+				<td>kyllä</td>
+				<td>1.6.2013</td>
+				<td>Etruskien kulta-aikaan sijoittuva tarina.</td>
+				<td><button onclick="alert('Muokataan tietuetta!')" type="button">Muokkaa</button> <button onclick="alert('Haetaan etsimääsi tietoa!')" type="button">Poista</button></td>
+			</tr>
+			<tr>
+				<td>Mika Waltari</td>
+				<td>Sinuhe</td>
+				<td>ISBN-654656500</td>
+				<td>Fiktio, Historia</td>
+				<td>kyllä</td>
+				<td>1.6.2010</td>
+				<td>Egyptin faaraoiden aikaak sijoittuva tarina.</td>
+				<td><button onclick="alert('Muokataan tietuetta!')" type="button">Muokkaa</button> <button onclick="alert('Haetaan etsimääsi tietoa!')" type="button">Poista</button></td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+ 

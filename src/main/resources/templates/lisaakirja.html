@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<div th:replace="fragments/head">...</div>
+	<head><title>Lisää kirja</title></head>
+
+	<body>
+		<div th:replace="fragments/navigation">...</div>
+
+
+<!--<form action="/action_page.php"> -->
+		<form action="">
+			<p>Kirjoittaja:</p>
+			<input name="kirjoittaja" type="text" value="kirjoittaja"/>
+			
+			<p>Otsikko:</p>
+			<input name="otsikko" type="text" value="otsikko"/>
+			
+			<p>ISBN</p>
+			<input name="isbn" type="text" value="ISBN"/>
+			
+			<p>Tagit (erota pilkulla):</p>
+			<input name="tagit" type="text" value="tagityyppi"/>
+
+			<table>
+				<tr>
+					<td>Ei Luettu</td>
+					<td>
+						<input checked="true" name="luettuvaiei" type="radio" value="notread"/> 
+					</td>
+				</tr>
+				<tr>
+					<td>Luettu</td>
+					<td>
+						<input name="luettuvaiei" type="radio" value="red"/> 
+					</td>
+					<td>
+						<input name="luettupvm" type="date"/> 
+					</td>
+				</tr>
+			</table>
+
+			<p>Kommentit:</p>
+			<textarea name="kommentit" style="width:600px; height:100px"></textarea>
+			<!--<input type="submit" value="Tallenna">-->
+			<button onclick="alert('Tallennetaan')" type="button">Tallenna</button>
+		</form>
+
+	</body>
+</html>
