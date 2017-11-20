@@ -20,7 +20,7 @@ Jaana Embrich - *jaemh*
 
 Oliver Kaarnalehto - *Corned*
 
-Mikko Laitinen - *laimikko1
+Mikko Laitinen - *laimikko1*
 
 Timo Konttinen - *tixkontt*
 
