@@ -28,7 +28,7 @@ public class VinkkiController {
 
     @PostMapping("/")
     public String kirjautuminenPOST(@RequestParam String kayttajanimi, @RequestParam String salasana){
-        return "vinkki";
+        return "redirect:/vinkki";
     }
 
     @GetMapping("/vinkki")
