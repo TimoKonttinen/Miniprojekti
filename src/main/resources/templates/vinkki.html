@@ -27,7 +27,11 @@
             <td th:text="${vinkki.otsikko}"></td>
             <td th:text="${vinkki.tyyppi}"></td>
             <td th:text="${vinkki.kommentti}"></td>
-
+            <td>
+            <form th:action="@{/vinkki/{vinkki_id}/delete(vinkki_id=${vinkki.id})}" method="POST">
+                <input type="submit" value="Poista"/>
+            </form>
+            </td>
         </tr>
     </table>
         
