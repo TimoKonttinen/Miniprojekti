@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="kirjanlisays" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="tyylisivu.css">
+    </head>
+<body>
+<ul>
+  <!--<li><a href="lisaakirja.html">Lisää lukuvinkki</a></li>-->
+ <li style="float:left"><a class="active" href="index.html">Etusivu</a></li>
+ <li style="float:left"><a class="active" href="lisaakirja.html">Lisää kirja</a></li>
+ <li style="float:left"><a class="active" href="haekirja.html">Etsi kirja</a></li>
+ <li style="float:left"><a class="active" href="vinkkilistaus.html">Vinkkilistaus</a></li>
+  <li style="float:right"><a class="active" href="about.html">About</a></li>
+</ul>
+</body>
+
+
+<!--<form action="/action_page.php"> -->
+<form action="">
+<br>
+<br>
+  Kirjoittaja:<br>
+  <input type="text" name="kirjoittaja" value="kirjoittaja">
+  <br>
+<br>
+  Otsikko:<br>
+  <input type="text" name="otsikko" value="otsikko">
+<br>
+<br>
+  ISBN<br>
+  <input type="text" name="isbn" value="ISBN">
+  <br><br>
+ 
+  Tagit (erota pilkulla):<br>
+  <input type="text" name="tagit" value="tagityyppi">
+  <br>
+Luettu:
+<br>
+
+  <input type="radio" name="luettuvaiei" value="notread" checked> Ei luettu<br>
+  <input type="radio" name="luettuvaiei" value="red"> Luettu <input type="date" name="luettupvm">
+ 
+<br>
+  Kommentit:<br>
+    <textarea name="kommentit" style="width:600px; height:100px">
+
+</textarea> 
+
+
+<br>
+  <!--<input type="submit" value="Tallenna">-->
+<button type="button" onclick="alert('Tallennetaan')">Tallenna</button> 
+</form> 
+
+
+
+</body>
+</html>
