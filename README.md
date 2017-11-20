@@ -1,7 +1,7 @@
 # Miniprojekti
 _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 
-[Backlog](https://docs.google.com/spreadsheets/d/1J0VOMOy0Ss3T3Ywq5ZDuwMiCbGqYshBwwUBn-Ye1sZk/edit?usp=sharing)
+[Backlogit](https://docs.google.com/spreadsheets/d/1J0VOMOy0Ss3T3Ywq5ZDuwMiCbGqYshBwwUBn-Ye1sZk/edit?usp=sharing)
 
 [Linkki sovellukseen Herokussa](http://miniprojekti.herokuapp.com/)
 
