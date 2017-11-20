@@ -6,11 +6,15 @@ _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 
 
 
-##Ryhmä:
+## Ryhmä:
 Dennis Ahlfors - *Dforssi*
+
 Jaana Embrich - *jaemh*
+
 Oliver Kaarnalehto -*Corned*
-Mikko Laine -*laimikko1*
+
+Mikko Laine -*laimikko1
+
 Timo Konttinen - *tixkontt*
 
 
