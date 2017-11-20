@@ -74,6 +74,7 @@ public class Stepdefs {
 
     @Then("^previously saved book with author \"([^\"]*)\" and comment \"([^\"]*)\" is deleted and not available on vinkki page")
     public void previously_saved_book_with_author_and_comment_is_deleted_and_not_availabe_on_vinkki_page(String kirjoittaja, String kommentti) throws Throwable {
+        driver.navigate().refresh();
         assertFalse(driver.findElement(By.tagName("body")).getText().contains(kirjoittaja));
         assertFalse(driver.findElement(By.tagName("body")).getText().contains(kommentti));
     }
