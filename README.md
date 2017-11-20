@@ -5,7 +5,10 @@ _Ohjemistotuotanto Syksy 2017 - Miniprojekti - Geneerinen ryhmä 1_
 
 [Linkki sovellukseen Herokussa](http://miniprojekti.herokuapp.com/)
 
+### Travis
+
 [![Build Status](https://travis-ci.org/Dforssi/Miniprojekti.svg?branch=master)](https://travis-ci.org/Dforssi/Miniprojekti)
+[Dforssi/Miniprojekti @ Travis] (https://travis-ci.org/Dforssi/Miniprojekti)
 
 
 
