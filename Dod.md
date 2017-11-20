@@ -1,4 +1,4 @@
-#H2 Definition of Done 
+# Definition of Done 
 
 
 1. Feature on luotu hyväksymäkriteerien mukaisesti.
