@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 
 import java.io.File;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -54,6 +55,13 @@ public class Stepdefs {
         Thread.sleep(500);
     }
 
+    @When("^user clicks on Poista-nappula on a previously saved book$")
+    public void user_clicks_on_poista_nappula_on_previously_saved_book() throws Throwable {
+//        WebElement element = driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td[5]/form/input"));
+        WebElement element = driver.findElement(By.xpath("//input[@value='Poista']"));
+        element.click();
+    }
+
     //
     @Then("^new kirjavinkki with \"([^\"]*)\" and \"([^\"]*)\" is shown$")
     public void is_shown(String otsikko, String kirjoittaja) throws Throwable {
@@ -62,6 +70,12 @@ public class Stepdefs {
 
         assertTrue(driver.findElement(By.tagName("body"))
                 .getText().contains(otsikko));
+    }
+
+    @Then("^previously saved book with author \"([^\"]*)\" and comment \"([^\"]*)\" is deleted and not available on vinkki page")
+    public void previously_saved_book_with_author_and_comment_is_deleted_and_not_availabe_on_vinkki_page(String kirjoittaja, String kommentti) throws Throwable {
+        assertFalse(driver.findElement(By.tagName("body")).getText().contains(kirjoittaja));
+        assertFalse(driver.findElement(By.tagName("body")).getText().contains(kommentti));
     }
 
     private void clickLinkWithText(String text) {
