@@ -23,20 +23,23 @@ public class VinkkiController {
     @Autowired
     private KirjoittajaRepository kirjoittajaRepository;
 
+    // Nykyinen Kirjautumissivu GET
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("vinkit", vinkkiRepository.findAll());
         return "index";
     }
 
+    // Nykyinen Kirjautumissivu POST
     @PostMapping("/")
     public String kirjautuminenPOST(@RequestParam String kayttajanimi, @RequestParam String salasana){
-        return "redirect:/vinkki";
+        return "redirect:/vinkkilistaus";
     }
 
     // TEMP
     @GetMapping("/vinkkilistaus")
-    public String vinkkilistaus() {
+    public String vinkkilistaus(Model model) {
+        model.addAttribute("vinkit", vinkkiRepository.findAll());
         return "vinkkilistaus";
     }
     
@@ -48,6 +51,26 @@ public class VinkkiController {
     @GetMapping("/lisaakirja")
     public String lisaakirja() {
         return "lisaakirja";
+    }
+
+    @PostMapping("/lisaakirja")
+    public String lisaaKirjaTietokantaan(@RequestParam String kirjoittaja, @RequestParam String otsikko, 
+            @RequestParam String isbn, @RequestParam String tagit) {
+        Vinkki uusiVinkki = new Vinkki();
+        Kirjoittaja uusiKirjoittaja = kirjoittajaRepository.findByName(kirjoittaja);
+        if(uusiKirjoittaja == null){
+            uusiKirjoittaja = new Kirjoittaja();
+            uusiKirjoittaja.setName(kirjoittaja);
+            kirjoittajaRepository.saveAndFlush(uusiKirjoittaja);
+        }
+
+        uusiVinkki.setKirjoittaja(uusiKirjoittaja);
+        uusiVinkki.setOtsikko(otsikko);
+        uusiVinkki.setISBN(isbn);
+        uusiVinkki.setTagit(tagit);
+        vinkkiRepository.saveAndFlush(uusiVinkki);
+
+        return "redirect:/vinkkilistaus";
     }
     
     @GetMapping("/about")
@@ -85,6 +108,6 @@ public class VinkkiController {
     @PostMapping("/vinkki/{id}/delete")
     public String poistaVinkki(@PathVariable long id) {
         vinkkiRepository.delete(id);
-        return "redirect:/vinkki";
+        return "redirect:/vinkkilistaus";
     }
 }

@@ -8,6 +8,7 @@
 			font-family: arial, sans-serif;
 			border-collapse: collapse;
 			width: 100%;
+			max-width: 900px;
 		}
 
 		td, th {
@@ -24,6 +25,34 @@
 	<body>
 		<div th:replace="fragments/navigation">...</div>
 
+		<center>
+			<table class="vinkkilistaus">
+				<thead>
+					<th>Kirjoittaja</th>
+					<th>Otsikko</th>
+					<th>ISBN</th>
+					<th>Tagit</th>
+					<th>-</th>
+				</thead>
+				<tr th:each="vinkki : ${vinkit}">
+					<td th:text="${vinkki.kirjoittaja.name}"></td>
+					<td th:text="${vinkki.otsikko}"></td>
+					<td th:text="${vinkki.ISBN}"></td>
+					<td th:text="${vinkki.tagit}"></td>
+					<td>
+						<!--<form th:action="${/vinkkilistaus}" method="POST">
+							<input type="submit" value="-Muokkaa"/>
+						</form>-->
+					</td>
+					<td>
+						<form th:action="@{/vinkki/{vinkki_id}/delete(vinkki_id=${vinkki.id})}" method="POST">
+							<input type="submit" value="Poista"/>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</center>
+<!--
 		<table>
 			<tr>
 				<th>Kirjoittaja</th>
@@ -75,6 +104,7 @@
 				<td><button onclick="alert('Muokataan tietuetta!')" type="button">Muokkaa</button> <button onclick="alert('Haetaan etsimääsi tietoa!')" type="button">Poista</button></td>
 			</tr>
 		</table>
+	-->
 	</body>
 </html>
 

@@ -3,6 +3,9 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
+.navigation-bar {
+    margin-bottom: 20px;
+}
 
 ul {
     list-style-type: none;

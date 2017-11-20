@@ -6,9 +6,7 @@
 	<body>
 		<div th:replace="fragments/navigation">...</div>
 
-
-<!--<form action="/action_page.php"> -->
-		<form action="">
+		<form th:action="@{/lisaakirja}" method="POST">
 			<p>Kirjoittaja:</p>
 			<input name="kirjoittaja" type="text" value="kirjoittaja"/>
 			
@@ -25,13 +23,13 @@
 				<tr>
 					<td>Ei Luettu</td>
 					<td>
-						<input checked="true" name="luettuvaiei" type="radio" value="notread"/> 
+						<input checked="true" name="luettu" type="radio" value="notread"/> 
 					</td>
 				</tr>
 				<tr>
 					<td>Luettu</td>
 					<td>
-						<input name="luettuvaiei" type="radio" value="red"/> 
+						<input name="luettu" type="radio" value="red"/> 
 					</td>
 					<td>
 						<input name="luettupvm" type="date"/> 
@@ -41,8 +39,8 @@
 
 			<p>Kommentit:</p>
 			<textarea name="kommentit" style="width:600px; height:100px"></textarea>
-			<!--<input type="submit" value="Tallenna">-->
-			<button onclick="alert('Tallennetaan')" type="button">Tallenna</button>
+			<input type="submit" value="Tallenna"/>
+			<!--<button onclick="alert('Tallennetaan')" type="button">Tallenna</button>-->
 		</form>
 
 	</body>
