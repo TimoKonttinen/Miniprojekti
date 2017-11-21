@@ -2,13 +2,28 @@ package ohtu.validator;
 
 public class Validator {
 
-    // attribuutit
+    // private VinkkiI vinkkiI
 
-    //konstruktori(t)
+    //Public Validator(VinkkiI vinkki){konstruktori}
 
-    //checkit:
+    /**
+     public void checkNull(){
+        VinkkiI.getOtsikko.notEmpty() && != null
+        VinkkiI.getKirjoittaja.notEmpty() && != null
+        VinkkiI.getTyyppi.notEmpty() && != null
+     }
 
-        //NOT NULLit
+
+     */
+
+
+    /**
+     if(getTyyppi().equalsIgnoreCase("XXX"){
+        check for class uniques
+     }
+
+     */
+
 
 
 }
