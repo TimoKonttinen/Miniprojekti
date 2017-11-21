@@ -6,42 +6,54 @@
 	<body>
 		<div th:replace="fragments/navigation">...</div>
 
-		<form th:action="@{/lisaakirja}" method="POST">
-			<p>Kirjoittaja:</p>
-			<input name="kirjoittaja" type="text" value="kirjoittaja"/>
-			
-			<p>Otsikko:</p>
-			<input name="otsikko" type="text" value="otsikko"/>
-			
-			<p>ISBN</p>
-			<input name="isbn" type="text" value="ISBN"/>
-			
-			<p>Tagit (erota pilkulla):</p>
-			<input name="tagit" type="text" value="tagityyppi"/>
-
-			<table>
+		<div align="center">
+			<table class="type-selection">
 				<tr>
-					<td>Ei Luettu</td>
-					<td>
-						<input checked="true" name="luettu" type="radio" value="notread"/> 
-					</td>
+					<button class="type-selection-button" type="button">Kirja</button>
+					<button class="type-selection-button" type="button">YouTube</button>
+					<button class="type-selection-button" type="button">Blogpost</button>	
 				</tr>
-				<tr>
-					<td>Luettu</td>
-					<td>
-						<input name="luettu" type="radio" value="red"/> 
-					</td>
-					<td>
-						<input name="luettupvm" type="date"/> 
-					</td>
-				</tr>
+				
 			</table>
 
-			<p>Kommentit:</p>
-			<textarea name="kommentit" style="width:600px; height:100px"></textarea>
-			<input type="submit" value="Tallenna"/>
-			<!--<button onclick="alert('Tallennetaan')" type="button">Tallenna</button>-->
-		</form>
+
+			<form th:action="@{/lisaakirja}" method="POST">
+				<p>Kirjoittaja:</p>
+				<input name="kirjoittaja" type="text" value="kirjoittaja"/>
+				
+				<p>Otsikko:</p>
+				<input name="otsikko" type="text" value="otsikko"/>
+				
+				<p>ISBN</p>
+				<input name="isbn" type="text" value="ISBN"/>
+				
+				<p>Tagit (erota pilkulla):</p>
+				<input name="tagit" type="text" value="tagityyppi"/>
+
+				<table>
+					<tr>
+						<td>Ei Luettu</td>
+						<td>
+							<input checked="true" name="luettu" type="radio" value="notread"/> 
+						</td>
+					</tr>
+					<tr>
+						<td>Luettu</td>
+						<td>
+							<input name="luettu" type="radio" value="red"/> 
+						</td>
+						<td>
+							<input name="luettupvm" type="date"/> 
+						</td>
+					</tr>
+				</table>
+
+				<p>Kommentit:</p>
+				<textarea name="kommentit" style="width:600px; height:100px"></textarea>
+				<input type="submit" value="Tallenna"/>
+				<!--<button onclick="alert('Tallennetaan')" type="button">Tallenna</button>-->
+			</form>
+		</div>
 
 	</body>
 </html>

@@ -11,4 +11,5 @@ gradle.properties
 .project
 
 database.mv.db
+database.trace.db
 
