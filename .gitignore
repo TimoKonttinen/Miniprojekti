@@ -4,6 +4,7 @@ build/
 bin/
 .gradle/
 .settings/
+.nb-gradle/
 
 gradle.properties
 .classpath
